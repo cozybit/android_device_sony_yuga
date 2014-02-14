@@ -14,6 +14,8 @@
     "target_path": "device/sony/fusion3-common"
   },
   {
+    "full_name": "cozybit/android_kernel_sony_apq8064",
+    "remote": "private",
     "repository": "android_kernel_sony_apq8064",
     "target_path": "kernel/sony/apq8064"
   },
