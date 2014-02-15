@@ -28,3 +28,8 @@ on boot
     chown system camera /sys/devices/i2c-0/0-0053/flash_current
     chmod 660 /sys/devices/i2c-0/0-0053/flash_current
     chown system camera /sys/devices/i2c-0/0-0053/status
+
+service wcn36xx /system/bin/sh /system/etc/init.wcn36xx.sh
+    class main
+    user root
+    oneshot
