@@ -7,11 +7,11 @@
 [[ -e /system/lib/modules/ccm.ko ]] && \
         /system/bin/insmod /system/lib/modules/ccm.ko
 
-/system/bin/insmod /system/lib/modules/cfg80211.ko
+#/system/bin/insmod /system/lib/modules/cfg80211.ko
 
-#/system/bin/insmod /system/lib/modules/backports/compat.ko
-#/system/bin/insmod /system/lib/modules/backports/cfg80211.ko
-#/system/bin/insmod /system/lib/modules/backports/mac80211.ko
+/system/bin/insmod /system/lib/modules/backports/compat.ko
+/system/bin/insmod /system/lib/modules/backports/cfg80211.ko
+/system/bin/insmod /system/lib/modules/backports/mac80211.ko
 
 #   WCN36XX_DBG_DXE         = 0x00000001,
 #   WCN36XX_DBG_DXE_DUMP    = 0x00000002,
@@ -39,7 +39,7 @@
 # Everything - *_DUMP - *_DXE
 #/system/bin/insmod /system/lib/modules/backports/wcn36xx.ko debug_mask=0x2d54
 
-#/system/bin/insmod /system/lib/modules/backports/wcn36xx.ko
-#/system/bin/insmod /system/lib/modules/backports/wcn36xx_msm.ko
+/system/bin/insmod /system/lib/modules/backports/wcn36xx.ko
+/system/bin/insmod /system/lib/modules/backports/wcn36xx_msm.ko
 
 #/system/bin/iw reg set US
