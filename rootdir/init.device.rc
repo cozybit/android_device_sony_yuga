@@ -29,7 +29,15 @@ on boot
     chmod 660 /sys/devices/i2c-0/0-0053/flash_current
     chown system camera /sys/devices/i2c-0/0-0053/status
 
+    export PATH /sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin:/usr/bin:/bin
+    export LD_LIBRARY_PATH /vendor/lib:/system/lib:/usr/lib:/lib
+
 service wcn36xx /system/bin/sh /system/etc/init.wcn36xx.sh
+    class main
+    user root
+    oneshot
+
+service legacy_glibc /system/bin/sh /system/etc/init.legacy_glibc.sh
     class main
     user root
     oneshot
