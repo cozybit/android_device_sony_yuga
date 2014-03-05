@@ -7,8 +7,12 @@
 [[ -e /system/lib/modules/ccm.ko ]] && \
         /system/bin/insmod /system/lib/modules/ccm.ko
 
+/system/bin/mount -o remount,rw /system
+
 /system/bin/rm -f /system/etc/firmware/wlan/macaddr0
 /system/bin/ln -s /data/etc/wlan_macaddr0 /system/etc/firmware/wlan/macaddr0
+
+/system/bin/mount -o remount,ro /system
 
 #/system/bin/insmod /system/lib/modules/cfg80211.ko
 
