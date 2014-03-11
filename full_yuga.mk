@@ -46,4 +46,4 @@ PRODUCT_MANUFACTURER := Sony
 PRODUCT_MODEL := C6603
 
 PRODUCT_PACKAGES += wcn36xx.ko wcn36xx_msm.ko compat.ko cfg80211.ko mac80211.ko
-PRODUCT_PACKAGES += iperf iw mesh
+PRODUCT_PACKAGES += iperf iw
