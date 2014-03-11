@@ -1,5 +1,10 @@
 # Load modules necessary for wcn36xx driver
 
+if [[ `/system/bin/getprop cozybit.disable_wcn36xx` == "1" ]]; then
+    /system/bin/insmod /system/lib/modules/cfg80211.ko
+    exit 0
+fi
+
 [[ -e /system/lib/modules/seqiv.ko ]] && \
         /system/bin/insmod /system/lib/modules/seqiv.ko
 [[ -e /system/lib/modules/ctr.ko ]] && \
@@ -13,8 +18,6 @@
 /system/bin/ln -s /data/etc/wlan_macaddr0 /system/etc/firmware/wlan/macaddr0
 
 /system/bin/mount -o remount,ro /system
-
-#/system/bin/insmod /system/lib/modules/cfg80211.ko
 
 /system/bin/insmod /system/lib/modules/backports/compat.ko
 /system/bin/insmod /system/lib/modules/backports/cfg80211.ko
