@@ -53,3 +53,14 @@ fi
 /system/bin/insmod /system/lib/modules/backports/wcn36xx_msm.ko
 
 #/system/bin/iw reg set US
+
+WIFI_CONF=/data/misc/wifi/wpa_supplicant.conf
+WIFI_CONF_SRC=/system/etc/wifi/wpa_supplicant.conf
+
+if [[ ! -f $WIFI_CONF ]] || [[ -f /data/misc/wifi/reset_wpa_s_conf ]]; then
+    /system/bin/cp $WIFI_CONF_SRC $WIFI_CONF
+    /system/bin/chmod 0660 $WIFI_CONF
+    /system/bin/chown wifi:wifi $WIFI_CONF
+fi
+
+/system/bin/setprop wlan.driver.status ok
