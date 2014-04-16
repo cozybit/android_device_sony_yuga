@@ -3,4 +3,4 @@ ro.cwm.enable_key_repeat=true
 
 # Graphics
 ro.sf.lcd_density=480
-cozybit.disable_wcn36xx=0
+cozybit.disable_wcn36xx=1

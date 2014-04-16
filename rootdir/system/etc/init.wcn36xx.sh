@@ -52,7 +52,7 @@ fi
 #/system/bin/insmod /system/lib/modules/backports/wcn36xx.ko \
 #    debug_mask=0x2d54 nohwcrypt=1
 
-/system/bin/insmod /system/lib/modules/backports/wcn36xx.ko nohwcrypt=1
+/system/bin/insmod /system/lib/modules/backports/wcn36xx.ko #nohwcrypt=1
 /system/bin/insmod /system/lib/modules/backports/wcn36xx_msm.ko
 
 #/system/bin/iw reg set US
